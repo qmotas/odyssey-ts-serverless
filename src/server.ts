@@ -1,24 +1,27 @@
-import { ApolloServer } from '@apollo/server';
+import { ApolloServer } from "@apollo/server";
 import {
-  startServerAndCreateLambdaHandler,
   handlers,
-} from '@as-integrations/aws-lambda';
+  startServerAndCreateLambdaHandler,
+} from "@as-integrations/aws-lambda";
+import { GraphQLFileLoader } from "@graphql-tools/graphql-file-loader";
+import { loadSchemaSync } from "@graphql-tools/load";
+import { addResolversToSchema } from "@graphql-tools/schema";
+import { join } from "path";
 
-const typeDefs = `#graphql
-  type Query {
-    hello: String
-  }
-`;
+const schema = loadSchemaSync(join(__dirname, "../schema.graphql"), {
+  loaders: [new GraphQLFileLoader()],
+});
 
 const resolvers = {
   Query: {
-    hello: () => 'world',
+    hello: () => "world",
   },
 };
 
+const schemaWithResolvers = addResolversToSchema({ schema, resolvers });
+
 const server = new ApolloServer({
-  typeDefs,
-  resolvers,
+  schema: schemaWithResolvers,
 });
 
 // This final export is important!
