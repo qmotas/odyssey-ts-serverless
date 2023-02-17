@@ -6,10 +6,10 @@ const serverlessConfiguration: AWS = {
   plugins: ["serverless-esbuild", "serverless-offline"],
   provider: {
     name: "aws",
-    runtime: "nodejs14.x",
-    apiGateway: {
-      minimumCompressionSize: 1024,
-      shouldStartNameWithService: true,
+    region: "ap-northeast-1",
+    runtime: "nodejs18.x",
+    httpApi: {
+      cors: true,
     },
     environment: {
       AWS_NODEJS_CONNECTION_REUSE_ENABLED: "1",
@@ -36,14 +36,14 @@ const serverlessConfiguration: AWS = {
       ],
     },
   },
-  package: { individually: true, include: ["./schema.graphql"] },
+  package: { individually: true, patterns: ["./schema.graphql"] },
   custom: {
     esbuild: {
       bundle: true,
       minify: false,
       sourcemap: true,
       exclude: ["aws-sdk"],
-      target: "node14",
+      target: "node18",
       define: { "require.resolve": undefined },
       platform: "node",
       concurrency: 10,
