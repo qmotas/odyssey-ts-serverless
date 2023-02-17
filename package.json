@@ -17,8 +17,6 @@
     "@graphql-tools/graphql-file-loader": "^7.5.16",
     "@graphql-tools/load": "^7.8.12",
     "@graphql-tools/schema": "^9.0.16",
-    "@middy/core": "^4.2.4",
-    "@middy/http-json-body-parser": "^4.2.4",
     "graphql": "^16.6.0"
   },
   "devDependencies": {
@@ -31,7 +29,6 @@
     "concurrently": "^7.6.0",
     "esbuild": "^0.16.17",
     "eslint": "^8.34.0",
-    "json-schema-to-ts": "^2.6.2",
     "prettier": "^2.8.4",
     "serverless": "^3.27.0",
     "serverless-esbuild": "^1.37.3",

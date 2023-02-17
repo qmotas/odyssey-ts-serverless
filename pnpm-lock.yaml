@@ -10,8 +10,6 @@ specifiers:
   '@graphql-tools/graphql-file-loader': ^7.5.16
   '@graphql-tools/load': ^7.8.12
   '@graphql-tools/schema': ^9.0.16
-  '@middy/core': ^4.2.4
-  '@middy/http-json-body-parser': ^4.2.4
   '@serverless/typescript': ^3.27.0
   '@types/aws-lambda': ^8.10.110
   '@types/node': ^18.13.0
@@ -19,7 +17,6 @@ specifiers:
   esbuild: ^0.16.17
   eslint: ^8.34.0
   graphql: ^16.6.0
-  json-schema-to-ts: ^2.6.2
   prettier: ^2.8.4
   serverless: ^3.27.0
   serverless-esbuild: ^1.37.3
@@ -35,8 +32,6 @@ dependencies:
   '@graphql-tools/graphql-file-loader': 7.5.16_graphql@16.6.0
   '@graphql-tools/load': 7.8.12_graphql@16.6.0
   '@graphql-tools/schema': 9.0.16_graphql@16.6.0
-  '@middy/core': 4.2.4
-  '@middy/http-json-body-parser': 4.2.4
   graphql: 16.6.0
 
 devDependencies:
@@ -49,7 +44,6 @@ devDependencies:
   concurrently: 7.6.0
   esbuild: 0.16.17
   eslint: 8.34.0
-  json-schema-to-ts: 2.6.2
   prettier: 2.8.4
   serverless: 3.27.0
   serverless-esbuild: 1.37.3_esbuild@0.16.17
@@ -2641,23 +2635,6 @@ packages:
     resolution: {integrity: sha512-GaHYm+c0O9MjZRu0ongGBRbinu8gVAMd2UZjji6jVmqKtZluZnptXGWhz1E8j8D2HJ3f/yMxKAUC0b+57wncIw==}
     dev: true
 
-  /@middy/core/4.2.4:
-    resolution: {integrity: sha512-uCN/+kjS1v2OF7U7DDb/2ajyoopCgAlYuSQwfVzixdzQfLCrY95kIPcsFlle0UV1lhnWay8VKFgpxddr7ZbEEw==}
-    engines: {node: '>=16'}
-    dev: false
-
-  /@middy/http-json-body-parser/4.2.4:
-    resolution: {integrity: sha512-///55SG0YAYpXWlSzz8Bw0anwwUWiSmO2OsXFHRO6EpDZIYG50nZhI8XBSdwcujuFY5ca9nlH6ZUCvp37e+3lw==}
-    engines: {node: '>=16'}
-    dependencies:
-      '@middy/util': 4.2.4
-    dev: false
-
-  /@middy/util/4.2.4:
-    resolution: {integrity: sha512-iE7KOc179YImNV6Kt1qMqc1Gl6VF60/dLrqa13g5sYiGCXaPCeb96xQPLta5OC7TuCgWljuwbefMVsYJcZjvRg==}
-    engines: {node: '>=16'}
-    dev: false
-
   /@nodelib/fs.scandir/2.1.5:
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
     engines: {node: '>= 8'}
@@ -2942,10 +2919,6 @@ packages:
 
   /@types/js-yaml/4.0.5:
     resolution: {integrity: sha512-FhpRzf927MNQdRZP0J5DLIdTXhjLYzeUTmLAu69mnVksLH9CJY3IuSeEgbKUki7GQZm0WqDkGzyxju2EZGD2wA==}
-    dev: true
-
-  /@types/json-schema/7.0.11:
-    resolution: {integrity: sha512-wOuvG1SN4Us4rez+tylwwwCV1psiNVOkJeM3AUWUNWg/jDQY2+HE/444y5gc+jBmRqASOm2Oeh5c1axHobwRKQ==}
     dev: true
 
   /@types/json-stable-stringify/1.0.34:
@@ -5870,16 +5843,6 @@ packages:
       - supports-color
     dev: true
 
-  /json-schema-to-ts/2.6.2:
-    resolution: {integrity: sha512-RrcvhZUcTAtfMVSvHIq3h/tELToha68V/1kGeQ2ggBv/4Bv31Zjbqis+b+Hiwibj6GO5WLA9PE4X93C8VTJ1TA==}
-    engines: {node: '>=16'}
-    dependencies:
-      '@babel/runtime': 7.20.13
-      '@types/json-schema': 7.0.11
-      ts-algebra: 1.1.1
-      ts-toolbelt: 9.6.0
-    dev: true
-
   /json-schema-traverse/0.4.1:
     resolution: {integrity: sha512-xbbCH5dCYU5T8LcEhhuh7HJ88HXuW3qsI3Y0zOZFKfZEHcpWiHU/Jxzk629Brsab/mMiHQti9wMP+845RPe3Vg==}
     dev: true
@@ -7808,12 +7771,6 @@ packages:
       escape-string-regexp: 1.0.5
     dev: true
 
-  /ts-algebra/1.1.1:
-    resolution: {integrity: sha512-W43a3/BN0Tp4SgRNERQF/QPVuY1rnHkgCr/fISLY0Ycu05P0NWPYRuViU8JFn+pFZuY6/zp9TgET1fxMzppR/Q==}
-    dependencies:
-      ts-toolbelt: 9.6.0
-    dev: true
-
   /ts-log/2.2.5:
     resolution: {integrity: sha512-PGcnJoTBnVGy6yYNFxWVNkdcAuAMstvutN9MgDJIV6L0oG8fB+ZNNy1T+wJzah8RPGor1mZuPQkVfXNDpy9eHA==}
     dev: true
@@ -7847,10 +7804,6 @@ packages:
       typescript: 4.9.5
       v8-compile-cache-lib: 3.0.1
       yn: 3.1.1
-    dev: true
-
-  /ts-toolbelt/9.6.0:
-    resolution: {integrity: sha512-nsZd8ZeNUzukXPlJmTBwUAuABDe/9qtVDelJeT/qW0ow3ZS3BsQJtNkan1802aM9Uf68/Y8ljw86Hu0h5IUW3w==}
     dev: true
 
   /tsconfig-paths/4.1.2:
