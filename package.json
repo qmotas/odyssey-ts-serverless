@@ -4,6 +4,7 @@
   "description": "Serverless aws-nodejs-typescript template",
   "main": "serverless.ts",
   "scripts": {
+    "dev": "concurrently \"serverless offline\" \"graphql-codegen --config codegen.ts --watch\"",
     "codegen": "graphql-codegen --config codegen.ts"
   },
   "engines": {
@@ -27,6 +28,7 @@
     "@serverless/typescript": "^3.27.0",
     "@types/aws-lambda": "^8.10.110",
     "@types/node": "^18.13.0",
+    "concurrently": "^7.6.0",
     "esbuild": "^0.16.17",
     "eslint": "^8.34.0",
     "json-schema-to-ts": "^2.6.2",
