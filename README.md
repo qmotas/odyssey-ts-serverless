@@ -1,6 +1,6 @@
 # odyssey-ts-serverless
 
-[Apollo Odyssey](https://www.apollographql.com/tutorials/browse)の API の一部の仕様を TypeScript + Serverless Framework + Apollo Server で AWS Lambda に構築するサンプルです
+[Apollo Odyssey（Apollo Server のチュートリアル）](<(https://www.apollographql.com/tutorials/browse)>)の API を部分的に TypeScript + Apollo Server で実装し、Serverless Framework で AWS Lambda にデプロイする実装サンプルです
 
 コンセプト
 

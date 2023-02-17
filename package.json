@@ -1,7 +1,7 @@
 {
   "name": "odyssey-ts-serverless",
   "version": "1.0.0",
-  "description": "Serverless aws-nodejs-typescript template",
+  "description": "Apollo Odyssey（Apollo Serverのチュートリアル）のAPIを部分的にTypeScript + Apollo Serverで実装し、Serverless FrameworkでAWS Lambdaにデプロイする実装サンプル",
   "main": "serverless.ts",
   "scripts": {
     "dev": "concurrently \"serverless offline\" \"graphql-codegen --config codegen.ts --watch\"",
